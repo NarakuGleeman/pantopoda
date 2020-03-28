@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="desktop-style">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <script type="text/javascript">
+        var active_page = "index",
+            board_name = "综合版1";
+    </script>
+    <link rel="stylesheet" media="screen" href="/static/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link href="https://cdn.bootcss.com/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/flags.css" />
+    <script type="text/javascript">
+        var configRoot = "/";
+        var inMod = false;
+        var modRoot = "/" + (inMod ? "mod.php?/" : "");
+    </script>
+    <script type="text/javascript" src="/static/main.js"></script>
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/static/yotsuba.css" />
+    <!-- <link rel="stylesheet" type="text/css" id="code_stylesheet" href="/static/undefined.htm" /> -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon" />
+
+    <script type="text/javascript" src="/static/jquery.js"></script>
+    <script type="text/javascript" src="/static/post-hover.js"></script>
+    <script type="text/javascript" src="/static/show-op.js"></script>
+    <script type="text/javascript" src="/static/mobile-style.js"></script>
+    <script type="text/javascript" src="/static/strftime.js"></script>
+    <script type="text/javascript" src="/static/local-time.js"></script>
+    <script type="text/javascript" src="/static/inline-expanding.js"></script>
+    <script type="text/javascript" src="/static/compact-boardlist.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+    <title>/综合版1/ - 综合版1</title>
+</head>
+
+<body class="8chan vichan is-not-moderator active-index" data-stylesheet="default">
+    <div class="bar top">
+        <div class="boardlist">
+            <a href="/" title="综合版1">综合版1</a>
+        </div>
+        <script type="text/javascript">
+            if (typeof do_boardlist != 'undefined') do_boardlist();
+        </script>
+    </div>
+    <div id="pagewrap">
+        <header>
+            <h1 class="glitch" data-text="/综合版1/ - 综合版1">/综合版1/ - 综合版1</h1>
+            <div class="subtitle">
+                测试版0.1
+            </div>
+        </header>
+        <!-- onsubmit="return dopost(this);" -->
+        <form id="postForm" enctype="multipart/form-data" action="/post" method="post">
+            <input type="hidden" name="subsection" id="subsection" value="1" />
+            <input type="hidden" name="reply" id="reply" value="-1" />
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Subject</th>
+                        <td>
+                            <input style="float:left;" type="text" name="subject" id="subject" size="25" maxlength="100" autocomplete="off" />
+                            <input accesskey="s" style="margin-left:2px;" type="submit" name="post" value="Send" />
+                            <!-- onclick="doMyPost()" -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Comment</th>
+                        <td><textarea name="comment" id="comment" rows="5" cols="35"></textarea></td>
+                    </tr>
+                    <tr id="upload">
+                        <th>File</th>
+                        <td><input type="file" name="file" id="attachment" />
+                            <script type="text/javascript">
+                                if (typeof init_file_selector !== 'undefined') init_file_selector(1);
+                            </script>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <script type="text/javascript">
+            rememberStuff();
+        </script>
+        <!--<div class="pages top"> [<a class="selected">1</a>] [<a href="/综合版1/2.html">2</a>] [<a href="/综合版1/3.html">3</a>] [<a href="/综合版1/4.html">4</a>] [<a href="/综合版1/5.html">5</a>] [<a href="/综合版1/6.html">6</a>] [<a href="/综合版1/7.html">7</a>] [<a href="/综合版1/8.html">8</a>] [<a href="/综合版1/9.html">9</a>] [<a href="/综合版1/10.html">10</a>] [<a href="/综合版1/11.html">11</a>] [<a href="/综合版1/12.html">12</a>] [<a href="/综合版1/13.html">13</a>] <form action="/综合版1/2.html" method="get"><input type="submit" value="Next" /></form></div>-->
+        <hr /> |
+        <a href="/">Home</a>
+        <hr />
+        <form name="postcontrols" action="/post" method="post">
+            <input type="hidden" name="board" value="综合版1" />
+
+            {% for view in views %}
+
+            <div class="thread" id="thread_1826" data-board="综合版1">
+                <div class="files">
+                    <div class="file">
+                        <p class="fileinfo">File: <a href="/static/1585315065282.jpg" target="_blank">1585315065282.jpg</a> <span class="details">(160.03 KB, 724x1024, <span class="postfilename">1024.jpg</span>)</span>
+                        </p>
+                        <a href="/static/1585315065282.jpg" target="_blank">
+                            <img class="post-image" src="/static/1584969925944.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                {% for post in view.posts %}
+                 
+                {% if loop.first %}
+
+                <div class="post op" id="op_1826">
+                    <p class="intro">
+                        <input type="checkbox" class="delete" name="delete_1826" id="delete_1826">
+                        <label for="delete_1826">
+                            <span class="name">{{ post.auth }}</span> 
+                            <time datetime="{{ post.pdate }}" data-local="true">{{ post.pdate }}</time>
+                        </label>&nbsp;
+                        <a class="post_no" id="post_no_1826" onclick="highlightReply(1826)" href="1/res/{{ post.pid }}#1826">No.</a>
+                        <a class="post_no" onclick="citeReply(1826)" href="/res/{{ post.pid }}#q1826">{{ post.pid }}</a>
+                        <a href="/res/{{ post.tid }}">[Reply]</a></p>
+                    <div class="body">{{ post.comment }}</div>
+                </div>
+
+                {% else %}
+
+                <div class="postcontainer" id="pc1830" data-board="综合版1">
+                    <div class="sidearrows">&gt;&gt;</div>
+                    <div class="post reply" id="reply_1830">
+                        <p class="intro"><input type="checkbox" class="delete" name="delete_1830" id="delete_1830">
+                            <label for="delete_1830">
+                                <span class="name">{{ post.auth }}</span> 
+                                <time datetime="2020-03-27T13:29:43Z" data-local="true" title="2 hours ago">{{ post.pdate }}</time>
+                            </label>&nbsp;
+                            <a class="post_no" id="post_no_1830" onclick="highlightReply(1830)" href="/res/{{ post.tid }}#1830">No.</a>
+                            <a class="post_no" onclick="citeReply(1830)" href="/res/{{ post.tid }}#q1830">{{ post.pid }}</a>
+                        </p>
+                        <div class="files"> </div>
+                        <div class="body">{{ post.comment }}</div>
+                    </div>
+                </div>
+                {% endif %} 
+                
+                {% endfor %}
+
+                <br>
+                <br class="clear">
+                <hr>
+            </div>
+
+            {% endfor %}
+
+
+
+            <div id="post-moderation-fields">
+                <div id="report-fields">
+                    <label for="reason">Reason</label>
+                    <input id="reason" type="text" name="reason" size="20" maxlength="100" />
+                    <input type="submit" name="report" value="Report" />
+                </div>
+            </div>
+
+        </form>
+        <div class="boardlist bottom">
+            <a href="/" title="综合版1">综合版1</a>
+            <!-- <a href="https://kukuku.uk/%E8%AF%A2%E9%97%AE2/index.html" title="询问2">询问2</a> /
+            <a href="https://kukuku.uk/ACGN/index.html" title="ACGN">ACGN</a> -->
+        </div>
+        <footer>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p class="unimportant" style="margin-top:20px;text-align:center;">
+                Copyright &copy; 2014 - {{ year }} Pantopoda
+            </p>
+            <p class="unimportant" style="text-align:center;">All trademarks, copyrights, comments, and images on this page are owned by and are the responsibility of their respective parties.</p>
+            <p class="unimportant" style="text-align:center;">We have no fear</p>
+        </footer>
+    </div>
+    <div class="bar bottom">
+        <div class="pages">
+            Previous [
+            <a class="selected">1</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/2.html">2</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/3.html">3</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/4.html">4</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/5.html">5</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/6.html">6</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/7.html">7</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/8.html">8</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/9.html">9</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/10.html">10</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/11.html">11</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/12.html">12</a> /
+            <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/13.html">13</a> ]
+            <form action="/综合版1/2.html" method="get">
+                <input type="submit" value="Next" />
+            </form> |
+            <!-- <a href="https://kukuku.uk/%E7%BB%BC%E5%90%88%E7%89%881/catalog.html">Catalog</a> | -->
+            <a href="https://kukuku.uk/">Home</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ready();
+    </script>
+    <!-- <div class="styles">
+        <a href="javascript:void(0);">[Yotsuba B]</a>
+        <a class="selected" href="javascript:void(0);">[Yotsuba]</a>
+        <a href="javascript:void(0);">[经典主题]</a>
+        <a href="javascript:void(0);">[夜间模式]</a>
+        <a href="javascript:void(0);">[Miku~]</a>
+    </div> -->
+</body>
+<script>
+</script>
+
+</html>

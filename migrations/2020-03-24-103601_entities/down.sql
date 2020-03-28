@@ -1,0 +1,5 @@
+-- This file should undo anything in `up.sql`
+DROP TABLE POST;
+DROP TABLE SUBSECTION;
+DROP TABLE THREAD;
+DROP TABLE ADMIN;

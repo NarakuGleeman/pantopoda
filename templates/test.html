@@ -1,0 +1,60 @@
+<html>
+
+<body>
+    <form id="postForm" onsubmit="doMyPost()" enctype="multipart/form-data" target="/" method="post">
+        <input type="hidden" name="subsection" id="subsection" value="1" />
+        <input type="hidden" name="reply" id="reply" value="-1" />
+        <table>
+            <tbody>
+                <tr>
+                    <th>Subject</th>
+                    <td>
+                        <input style="float:left;" type="text" name="subject" id="subject" size="25" maxlength="100" autocomplete="off" />
+                        <input accesskey="s" style="margin-left:2px;" type="submit" name="post" value="Send" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Comment</th>
+                    <td><textarea name="comment" id="comment" rows="5" cols="35"></textarea></td>
+                </tr>
+                <tr id="upload">
+                    <th>File</th>
+                    <td><input type="file" name="file" id="attachment" />
+                        <script type="text/javascript">
+                            if (typeof init_file_selector !== 'undefined') init_file_selector(1);
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        function doMyPost() {
+            var myForm = document.getElementById('postForm');
+            var myFile = document.getElementById('attachment');
+
+            let formData = new FormData();
+
+            const obj = {
+                subsection: Number(document.getElementById('subsection').value),
+                reply: Number(document.getElementById('reply').value),
+                subject: document.getElementById('subject').value,
+                comment: document.getElementById('comment').value
+            };
+
+            const json = JSON.stringify(obj);
+
+            console.log(obj);
+            console.log(json);
+
+            formData.append("data", json);
+            formData.append("file", myFile.files[0]);
+
+            var request = new XMLHttpRequest();
+            request.open("POST", "/post");
+            request.send(formData);
+        }
+    </script>
+</body>
+
+</html>
